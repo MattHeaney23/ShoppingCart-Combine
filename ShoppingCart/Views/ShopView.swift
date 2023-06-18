@@ -10,13 +10,25 @@ import SwiftUI
 struct ShopView: View {
     
     let currentStock = CurrentStock()
-    var cart = ShoppingCart()
+    @ObservedObject var cart = ShoppingCart()
     
     var body: some View {
+        
         VStack {
-            Text("Hello!")
+            List(currentStock.items) { item in
+                ItemView(item: item)
+            }
+            
+            Text("Total: \(cart.totalPrice)")
+            
+            Button {
+                cart.addItemToCart(currentStock.items[0])
+            } label: {
+                Text("Buy!")
+            }
+
         }
-        .padding()
+        
     }
 }
 

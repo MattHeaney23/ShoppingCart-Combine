@@ -14,6 +14,7 @@
 		C91A4DE02A3E43F5004E6E85 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A4DDF2A3E43F5004E6E85 /* ShoppingItem.swift */; };
 		C91A4DE22A3E4495004E6E85 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A4DE12A3E4495004E6E85 /* ShoppingCart.swift */; };
 		C91A4DE52A3E4656004E6E85 /* CurrentStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A4DE42A3E4656004E6E85 /* CurrentStock.swift */; };
+		C91A4DE72A3F47B9004E6E85 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A4DE62A3F47B9004E6E85 /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C91A4DDF2A3E43F5004E6E85 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		C91A4DE12A3E4495004E6E85 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		C91A4DE42A3E4656004E6E85 /* CurrentStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStock.swift; sourceTree = "<group>"; };
+		C91A4DE62A3F47B9004E6E85 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C91217842A3E433F00F45028 /* ShopView.swift */,
+				C91A4DE62A3F47B9004E6E85 /* ItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91A4DE02A3E43F5004E6E85 /* ShoppingItem.swift in Sources */,
+				C91A4DE72A3F47B9004E6E85 /* ItemView.swift in Sources */,
 				C91217852A3E433F00F45028 /* ShopView.swift in Sources */,
 				C91A4DE52A3E4656004E6E85 /* CurrentStock.swift in Sources */,
 				C91217832A3E433F00F45028 /* ShoppingCartApp.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ShoppingItem {
+struct ShoppingItem: Identifiable {
 
     /// A unique ID for the item
     let id = UUID()
@@ -16,7 +16,7 @@ struct ShoppingItem {
     let name: String
     
     /// The price of the item, in GBP for this showcase
-    let price: Float
+    let price: CGFloat
     
     /// The thumbnail of the image. For this showcase, these are locally stored images
     let imageName: String
