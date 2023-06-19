@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ShoppingItem: Identifiable {
+struct ShoppingItem: Identifiable, Equatable {
 
     /// A unique ID for the item
     let id = UUID()

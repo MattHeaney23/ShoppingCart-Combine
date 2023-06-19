@@ -7,20 +7,19 @@
 
 import Combine
 import Foundation
-import SwiftUI
 
 class ShoppingCart: ObservableObject {
 
     @Published var items: [ShoppingItem] = []
-    
     @Published var totalPrice: CGFloat = 0.0
+    
     private var subscribers = Set<AnyCancellable>()
     
     init() {
         prepareSubscriptions()
     }
     
-    func prepareSubscriptions() {
+    private func prepareSubscriptions() {
         $items
             .map { $0.reduce(0, { $0 + $1.price }) }
             .assign(to: \.totalPrice, on: self)

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "smartContactLens.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

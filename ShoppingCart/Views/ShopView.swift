@@ -10,7 +10,7 @@ import SwiftUI
 struct ShopView: View {
     
     let currentStock = CurrentStock()
-    @ObservedObject var cart = ShoppingCart()
+    @EnvironmentObject var cart: ShoppingCart
     
     var body: some View {
         
@@ -18,17 +18,8 @@ struct ShopView: View {
             List(currentStock.items) { item in
                 ItemView(item: item)
             }
-            
-            Text("Total: \(cart.totalPrice)")
-            
-            Button {
-                cart.addItemToCart(currentStock.items[0])
-            } label: {
-                Text("Buy!")
-            }
-
+            Text("Total: \(cart.totalPrice, specifier: "%.2f")")
         }
-        
     }
 }
 
