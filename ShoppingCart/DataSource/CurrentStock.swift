@@ -21,9 +21,6 @@ class CurrentStock {
         ShoppingItem(name: "Teleportation Device",
                      price: 1000000.00,
                      imageName: "teleportationDevice"),
-        ShoppingItem(name: "Time Machine",
-                     price: 9999999.99,
-                     imageName: "timeMachine"),
         ShoppingItem(name: "Thought Recorder",
                      price: 5499.00,
                      imageName: "thoughtRecorder"),
@@ -32,6 +29,9 @@ class CurrentStock {
                      imageName: "holographicTrainer"),
         ShoppingItem(name: "Life-Like AI Pet",
                      price: 499.00,
-                     imageName: "aiPet")
+                     imageName: "aiPet"),
+        ShoppingItem(name: "Time Machine",
+                     price: 9999999.99,
+                     imageName: "timeMachine")
     ]
 }
