@@ -33,7 +33,7 @@ class ShoppingCart: ObservableObject {
     }
     
     func removeItemFromCart(_ item: ShoppingItem) {
-        if let indexToRemove = items.firstIndex(where: { $0.id == item.id }) {
+        if let indexToRemove = items.firstIndex(where: { $0.name == item.name }) {
             items.remove(at: indexToRemove)
         }
     }
