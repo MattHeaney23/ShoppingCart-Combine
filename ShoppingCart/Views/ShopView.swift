@@ -12,13 +12,30 @@ struct ShopView: View {
     let currentStock = CurrentStock()
     @EnvironmentObject var cart: ShoppingCart
     
+    let columns = [
+        GridItem(.flexible(), spacing: 8),
+        GridItem(.flexible(), spacing: 8)
+    ]
+    
     var body: some View {
-        
-        VStack {
-            List(currentStock.items) { item in
-                ItemView(item: item)
+        VStack(spacing: 0) {
+         
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 8) {
+                    ForEach(currentStock.items) { item in
+                        ItemView(item: item)
+                    }
+                }
+                .padding(.horizontal, 8)
             }
-            Text("Total: \(cart.totalPrice, specifier: "%.2f")")
+            
+            Divider()
+    
+            Text("Total: \(cart.totalPrice.displayableCurrency())")
+                .frame(maxWidth: .infinity)
+                .frame(height: 20)
+                .padding(16)
+                .background(Color.gray.opacity(0.05))
         }
     }
 }

@@ -15,6 +15,7 @@
 		C91A4DE22A3E4495004E6E85 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A4DE12A3E4495004E6E85 /* ShoppingCart.swift */; };
 		C91A4DE52A3E4656004E6E85 /* CurrentStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A4DE42A3E4656004E6E85 /* CurrentStock.swift */; };
 		C91A4DE72A3F47B9004E6E85 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A4DE62A3F47B9004E6E85 /* ItemView.swift */; };
+		C96748132A4455410085DDF3 /* Double+DisplayableCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96748122A4455410085DDF3 /* Double+DisplayableCurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C91A4DE12A3E4495004E6E85 /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		C91A4DE42A3E4656004E6E85 /* CurrentStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStock.swift; sourceTree = "<group>"; };
 		C91A4DE62A3F47B9004E6E85 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		C96748122A4455410085DDF3 /* Double+DisplayableCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+DisplayableCurrency.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C91A4DDE2A3E43EA004E6E85 /* Models */,
 				C91A4DDD2A3E43CD004E6E85 /* Views */,
 				C91A4DE32A3E4643004E6E85 /* DataSource */,
+				C96748112A44552B0085DDF3 /* Extensions */,
 				C91217862A3E434100F45028 /* Assets.xcassets */,
 				C91217882A3E434100F45028 /* Preview Content */,
 			);
@@ -101,6 +104,14 @@
 				C91A4DE42A3E4656004E6E85 /* CurrentStock.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		C96748112A44552B0085DDF3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C96748122A4455410085DDF3 /* Double+DisplayableCurrency.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96748132A4455410085DDF3 /* Double+DisplayableCurrency.swift in Sources */,
 				C91A4DE02A3E43F5004E6E85 /* ShoppingItem.swift in Sources */,
 				C91A4DE72A3F47B9004E6E85 /* ItemView.swift in Sources */,
 				C91217852A3E433F00F45028 /* ShopView.swift in Sources */,

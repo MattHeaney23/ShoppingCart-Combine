@@ -14,21 +14,26 @@ struct ItemView: View {
     
     var body: some View {
     
-        HStack {
+        VStack(spacing: 0) {
             Image(item.imageName)
                 .resizable()
                 .scaledToFill()
-                .frame(width: 80, height: 80)
+                .frame(height: 100)
+                .frame(maxWidth: .infinity)
                 .clipped()
-
+            
             VStack {
-                
                 Text(item.name)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
-                Text("£\(item.price, specifier: "%.2f")")
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text("\(item.price.displayableCurrency())")
+                    .frame(maxWidth: .infinity, alignment: .center)
+            }
+            .frame(height: 80)
                 
+                Divider()
+            
                 HStack {
 
                     Button {
@@ -51,9 +56,15 @@ struct ItemView: View {
                             .padding(8)
                     }
                     
-                }.frame(maxWidth: .infinity, alignment: .leading)
-                
-            }
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .frame(height: 30)
         }
+        .background(.white)
+        .overlay {
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(.gray, lineWidth: 2)
+        }
+        .cornerRadius(20)
     }
 }

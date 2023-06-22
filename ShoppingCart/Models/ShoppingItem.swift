@@ -16,7 +16,7 @@ struct ShoppingItem: Identifiable, Equatable {
     let name: String
     
     /// The price of the item, in GBP for this showcase
-    let price: CGFloat
+    let price: Double
     
     /// The thumbnail of the image. For this showcase, these are locally stored images
     let imageName: String

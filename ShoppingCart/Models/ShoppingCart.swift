@@ -7,11 +7,12 @@
 
 import Combine
 import Foundation
+import SwiftUI
 
 class ShoppingCart: ObservableObject {
 
     @Published var items: [ShoppingItem] = []
-    @Published var totalPrice: CGFloat = 0.0
+    @Published var totalPrice: Double = 0.0
     
     private var subscribers = Set<AnyCancellable>()
     
@@ -37,6 +38,6 @@ class ShoppingCart: ObservableObject {
     }
     
     func getItemCountInCart(_ item: ShoppingItem) -> Int {
-        items.filter { $0.id == item.id }.count
+        items.filter { $0.name == item.name }.count
     }
 }
