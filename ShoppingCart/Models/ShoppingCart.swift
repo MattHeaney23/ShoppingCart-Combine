@@ -14,10 +14,7 @@ class ShoppingCart: ObservableObject {
     //MARK: States
     @Published var items: [ShoppingItem] = []
     @Published var totalPrice: Double = 0.0
-    
-    //MARK: Subscriber Properties
-    private var subscribers = Set<AnyCancellable>()
-    
+        
     //MARK: Initialisers
     init() {
         prepareSubscriptions()
@@ -27,8 +24,7 @@ class ShoppingCart: ObservableObject {
     private func prepareSubscriptions() {
         $items
             .map { $0.reduce(0, { $0 + $1.price }) }
-            .assign(to: \.totalPrice, on: self)
-            .store(in: &subscribers)
+            .assign(to: &$totalPrice)
     }
     
     //MARK: Cart Logic

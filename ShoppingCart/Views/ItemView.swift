@@ -37,6 +37,7 @@ struct ItemView: View {
             .frame(height: 100)
             .frame(maxWidth: .infinity)
             .clipped()
+            .contentShape(Rectangle())
     }
     
     func itemInfoComponent() -> some View {

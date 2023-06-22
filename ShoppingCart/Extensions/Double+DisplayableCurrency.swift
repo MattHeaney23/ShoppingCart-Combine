@@ -13,6 +13,6 @@ extension Double {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale(identifier: "en_UK")
-        return formatter.string(from: NSNumber(value: self)) ?? ""
+        return formatter.string(from: NSNumber(value: self)) ?? "N/A"
     }
 }
