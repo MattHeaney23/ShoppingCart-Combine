@@ -27,6 +27,8 @@ struct ShopView: View {
                     }
                 }
                 .padding(.horizontal, 8)
+                .padding(.bottom, 16)
+                
             }
             
             Divider()

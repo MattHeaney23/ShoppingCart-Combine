@@ -14,8 +14,11 @@ struct ShoppingCartApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ShopView()
-                .environmentObject(cart)
+            NavigationView {
+                ShopView()
+                    .navigationTitle("Splurge")
+            }
+            .environmentObject(cart)
         }
     }
 }

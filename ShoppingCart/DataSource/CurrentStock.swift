@@ -23,5 +23,15 @@ class CurrentStock {
                      imageName: "teleportationDevice"),
         ShoppingItem(name: "Time Machine (No Warranty)",
                      price: 9999999.99,
-                     imageName: "timeMachine")]
+                     imageName: "timeMachine"),
+        ShoppingItem(name: "Thought Recorder",
+                     price: 5499.00,
+                     imageName: "thoughtRecorder"),
+        ShoppingItem(name: "Holographic Personal Trainer",
+                     price: 1999.00,
+                     imageName: "holographicTrainer"),
+        ShoppingItem(name: "Life-Like AI Pet",
+                     price: 499.00,
+                     imageName: "aiPet")
+    ]
 }

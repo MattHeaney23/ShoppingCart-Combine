@@ -30,6 +30,7 @@ struct ItemView: View {
                 Text("\(item.price.displayableCurrency())")
                     .frame(maxWidth: .infinity, alignment: .center)
             }
+            .multilineTextAlignment(.center)
             .frame(height: 80)
                 
                 Divider()
