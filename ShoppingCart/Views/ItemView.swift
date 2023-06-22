@@ -9,57 +9,17 @@ import SwiftUI
 
 struct ItemView: View {
     
+    //MARK: Dependancies
     let item: ShoppingItem
     @EnvironmentObject var cart: ShoppingCart
     
+    //MARK: Body
     var body: some View {
-    
         VStack(spacing: 0) {
-            Image(item.imageName)
-                .resizable()
-                .scaledToFill()
-                .frame(height: 100)
-                .frame(maxWidth: .infinity)
-                .clipped()
-            
-            VStack {
-                Text(item.name)
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .center)
-                
-                Text("\(item.price.displayableCurrency())")
-                    .frame(maxWidth: .infinity, alignment: .center)
-            }
-            .multilineTextAlignment(.center)
-            .frame(height: 80)
-                
-                Divider()
-            
-                HStack {
-
-                    Button {
-                        cart.removeItemFromCart(item)
-                    } label: {
-                        Image(systemName: "minus.circle")
-                            .resizable()
-                            .frame(width: 15, height: 15)
-                            .padding(8)
-                    }
-
-                    Text("\(cart.getItemCountInCart(item))")
-
-                    Button {
-                        cart.addItemToCart(item)
-                    } label: {
-                        Image(systemName: "plus.circle")
-                            .resizable()
-                            .frame(width: 15, height: 15)
-                            .padding(8)
-                    }
-                    
-                }
-                .frame(maxWidth: .infinity, alignment: .center)
-                .frame(height: 30)
+            itemImageComponent()
+            itemInfoComponent()
+            Divider()
+            addOrRemoveItemComponent()
         }
         .background(.white)
         .overlay {
@@ -67,5 +27,56 @@ struct ItemView: View {
                 .stroke(.gray, lineWidth: 2)
         }
         .cornerRadius(20)
+    }
+    
+    //MARK: Views
+    func itemImageComponent() -> some View {
+        Image(item.imageName)
+            .resizable()
+            .scaledToFill()
+            .frame(height: 100)
+            .frame(maxWidth: .infinity)
+            .clipped()
+    }
+    
+    func itemInfoComponent() -> some View {
+        VStack {
+            Text(item.name)
+                .bold()
+                .frame(maxWidth: .infinity, alignment: .center)
+            
+            Text("\(item.price.displayableCurrency())")
+                .frame(maxWidth: .infinity, alignment: .center)
+        }
+        .multilineTextAlignment(.center)
+        .frame(height: 80)
+    }
+    
+    func addOrRemoveItemComponent() -> some View {
+        HStack {
+            Button {
+                cart.removeItemFromCart(item)
+            } label: {
+                buttonImage(systemName: "minus.circle")
+            }
+            
+            Text("\(cart.getItemCountInCart(item))")
+
+            Button {
+                cart.addItemToCart(item)
+            } label: {
+                buttonImage(systemName: "plus.circle")
+            }
+            
+        }
+        .frame(maxWidth: .infinity, alignment: .center)
+        .frame(height: 30)
+    }
+    
+    func buttonImage(systemName: String) -> some View {
+        Image(systemName: systemName)
+            .resizable()
+            .frame(width: 15, height: 15)
+            .padding(8)
     }
 }

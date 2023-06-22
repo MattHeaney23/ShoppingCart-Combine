@@ -21,7 +21,7 @@ class CurrentStock {
         ShoppingItem(name: "Teleportation Device",
                      price: 1000000.00,
                      imageName: "teleportationDevice"),
-        ShoppingItem(name: "Time Machine (No Warranty)",
+        ShoppingItem(name: "Time Machine",
                      price: 9999999.99,
                      imageName: "timeMachine"),
         ShoppingItem(name: "Thought Recorder",

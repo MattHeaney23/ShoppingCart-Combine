@@ -11,15 +11,19 @@ import SwiftUI
 
 class ShoppingCart: ObservableObject {
 
+    //MARK: States
     @Published var items: [ShoppingItem] = []
     @Published var totalPrice: Double = 0.0
     
+    //MARK: Subscriber Properties
     private var subscribers = Set<AnyCancellable>()
     
+    //MARK: Initialisers
     init() {
         prepareSubscriptions()
     }
     
+    //MARK: Subscriber Preparation
     private func prepareSubscriptions() {
         $items
             .map { $0.reduce(0, { $0 + $1.price }) }
@@ -27,6 +31,7 @@ class ShoppingCart: ObservableObject {
             .store(in: &subscribers)
     }
     
+    //MARK: Cart Logic
     func addItemToCart(_ item: ShoppingItem) {
         items.append(item)
     }
